@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction — Antigravity Docs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Topbar ====== -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-logo">
+      <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      <span>Antigravity Docs</span>
+    </a>
+
+    <div class="topbar-search">
+      <svg class="w-4 h-4 search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Search documentation… (⌘K)" />
+      <kbd>⌘K</kbd>
+    </div>
+
+    <select class="version-select">
+      <option value="v2.0" selected>v2.0 (Latest)</option>
+      <option value="v1.8">v1.8</option>
+      <option value="v1.0">v1.0</option>
+    </select>
+
+    <button class="mobile-menu-btn" aria-label="Open sidebar">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </header>
+
+  <!-- ====== Sidebar Overlay (Mobile) ====== -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- ====== Sidebar ====== -->
+  <aside class="sidebar">
+    <nav>
+      <div class="sidebar-group-label">Getting Started</div>
+      <a href="index.html" class="sidebar-link active">Introduction</a>
+      <a href="installation.html" class="sidebar-link">Installation</a>
+      <a href="#" class="sidebar-link">Quick Start</a>
+
+      <div class="sidebar-group-label">Core Concepts</div>
+      <a href="#" class="sidebar-link">Design Tokens</a>
+      <a href="#" class="sidebar-link">Components</a>
+
+      <div class="sidebar-group-label">API Reference</div>
+      <a href="api-reference.html" class="sidebar-link">Endpoints</a>
+    </nav>
+  </aside>
+
+  <!-- ====== On-page TOC (Desktop only) ====== -->
+  <aside class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#about-antigravity" class="toc-link">About Antigravity</a>
+    <a href="#core-features" class="toc-link">Core Features</a>
+    <a href="#quick-navigation" class="toc-link">Quick Navigation</a>
+  </aside>
+
+  <!-- ====== Main Content ====== -->
+  <main class="main-content">
+    <article>
+      <h1>Introduction</h1>
+      <p class="lead">Welcome to the Antigravity design platform developer docs. Learn how to connect visual styling panels to real browser state and export clean cross-platform assets.</p>
+
+      <section id="about-antigravity">
+        <h2>About Antigravity</h2>
+        <p>
+          Antigravity is a unified interface construction workspace. It allows designers and developers to co-construct web templates, SaaS metrics grids, desktop shell mockups, and mobile frames within a single shared design system.
+        </p>
+        <div class="admonition note">
+          <svg class="admonition-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <div class="admonition-content">
+            <strong>Single Source of Truth</strong>
+            All visual widgets are backed by real-time CSS variables, compiled output configurations, and accessible layout properties.
+          </div>
+        </div>
+      </section>
+
+      <section id="core-features">
+        <h2>Core Features</h2>
+        <p>
+          Construct premium pages, dashboards, and app screens with a focus on:
+        </p>
+        <ul>
+          <li><strong>Universal styling tokens</strong>: Fluid colors, shadows, border-radii, and animations.</li>
+          <li><strong>State-driven layouts</strong>: Forms, tab controls, bottom sheets, and toggles that connect to state variables.</li>
+          <li><strong>Cross-platform compatibility</strong>: Style presets that compile down to CSS/Tailwind, macOS app properties, and Android layouts.</li>
+        </ul>
+      </section>
+
+      <section id="quick-navigation">
+        <h2>Quick Navigation</h2>
+        <p>
+          Ready to jump in? Select one of the quick start pathways below:
+        </p>
+        
+        <div class="card-grid">
+          <!-- Card 1 -->
+          <a href="installation.html" class="doc-card">
+            <div class="doc-card-icon bg-blue-50 text-blue-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m-8-8h16"/></svg>
+            </div>
+            <h3 class="doc-card-title">Installation Guide</h3>
+            <p class="doc-card-desc">Set up your local repository workspace and install package dependencies.</p>
+            <div class="doc-card-arrow">
+              <span>View Guide</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Card 2 -->
+          <a href="api-reference.html" class="doc-card">
+            <div class="doc-card-icon bg-green-50 text-green-600">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 9l3 3-3 3m5 0h3"/></svg>
+            </div>
+            <h3 class="doc-card-title">API Reference</h3>
+            <p class="doc-card-desc">Explore REST Endpoints to integrate metrics data with your workspace dashboards.</p>
+            <div class="doc-card-arrow">
+              <span>Explore APIs</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        </div>
+      </section>
+    </article>
+
+    <!-- ====== Prev / Next Navigation ====== -->
+    <nav class="prev-next">
+      <div></div> <!-- Left empty spacer -->
+      <a href="installation.html" class="next">
+        <span class="label">Next</span>
+        <span class="title">Installation &rarr;</span>
+      </a>
+    </nav>
+
+    <!-- ====== Feedback Widget ====== -->
+    <div class="feedback-widget">
+      <p>Was this page helpful?</p>
+      <div class="feedback-btns">
+        <button class="feedback-btn" data-val="yes">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+          Yes
+        </button>
+        <button class="feedback-btn" data-val="no">
+          <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"/></svg>
+          No
+        </button>
+      </div>
+      <div class="feedback-thanks">Thank you for your feedback!</div>
+    </div>
+  </main>
+
+  <script src="js/docs.js"></script>
+</body>
+</html>

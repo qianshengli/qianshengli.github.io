@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — Universal Product Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="h-full flex flex-col select-none">
+
+  <!-- ====== Title Bar ====== -->
+  <header class="titlebar flex items-center h-12 px-4 shrink-0">
+    <!-- Traffic Lights -->
+    <div class="traffic-lights-group flex items-center gap-2 mr-4">
+      <button class="traffic-light close" aria-label="Close"></button>
+      <button class="traffic-light minimize" aria-label="Minimize"></button>
+      <button class="traffic-light maximize" aria-label="Maximize"></button>
+    </div>
+    <!-- Title -->
+    <span class="text-xs font-semibold text-gray-400 tracking-wide uppercase">Universal Product Design</span>
+    <!-- Spacer -->
+    <div class="flex-1"></div>
+    <!-- Search (decorative) -->
+    <div class="flex items-center gap-2 bg-gray-100/80 rounded-lg px-3 py-1.5 text-xs text-gray-400 mr-3 cursor-pointer hover:bg-gray-200/70 transition">
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      Search…
+      <kbd>⌘K</kbd>
+    </div>
+    <!-- Avatar -->
+    <div class="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold">A</div>
+  </header>
+
+  <!-- ====== Main Layout ====== -->
+  <div class="flex flex-1 min-h-0">
+
+    <!-- ====== Sidebar ====== -->
+    <nav class="sidebar flex flex-col py-4 overflow-y-auto" aria-label="Main navigation">
+      <!-- Workspace -->
+      <div class="px-4 mb-5">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white text-sm font-bold shadow-sm">U</div>
+          <div>
+            <div class="text-sm font-semibold text-gray-900 leading-tight">Universal</div>
+            <div class="text-[11px] text-gray-400">Pro Workspace</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav Group: Main -->
+      <div class="px-3 mb-1">
+        <div class="sidebar-section-label mb-2">Main</div>
+        <div class="flex flex-col gap-0.5">
+          <a href="index.html" class="sidebar-link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            Projects
+          </a>
+          <a href="notifications.html" class="sidebar-link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            Notifications
+            <span class="badge bg-blue-100 text-blue-700 ml-auto">3</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Nav Group: Account -->
+      <div class="px-3 mt-4 mb-1">
+        <div class="sidebar-section-label mb-2">Account</div>
+        <div class="flex flex-col gap-0.5">
+          <a href="#" class="sidebar-link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+            Profile
+          </a>
+          <a href="settings.html" class="sidebar-link active" aria-current="page">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            Settings
+          </a>
+          <a href="#" class="sidebar-link">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Security
+          </a>
+        </div>
+      </div>
+
+      <!-- Spacer -->
+      <div class="flex-1"></div>
+
+      <!-- Bottom: Upgrade Banner -->
+      <div class="px-3 mt-4">
+        <div class="rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 p-4 text-white">
+          <div class="text-xs font-semibold mb-1">Upgrade to Team</div>
+          <div class="text-[11px] opacity-80 leading-snug mb-3">Unlock collaboration, shared libraries, and advanced exports.</div>
+          <button class="w-full bg-white/20 hover:bg-white/30 active:scale-[.97] text-white text-xs font-semibold py-2 rounded-lg transition backdrop-blur">Learn More</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ====== Canvas ====== -->
+    <main class="flex-1 overflow-y-auto p-8" style="background: var(--canvas-bg);">
+      <!-- Header Row -->
+      <div class="mb-8 animate-in">
+        <h1 class="text-2xl font-bold text-gray-900">Settings</h1>
+        <p class="text-sm text-gray-500 mt-1">Manage your application and account preferences</p>
+      </div>
+
+      <!-- Settings Layout -->
+      <div class="max-w-3xl space-y-6">
+
+        <!-- Application settings group -->
+        <section class="card-static p-6 space-y-4 animate-in animate-in-delay-1">
+          <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Application</h2>
+          
+          <!-- Telemetry Toggle -->
+          <div class="flex items-center justify-between py-2">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-900">Usage Telemetry</h3>
+              <p class="text-xs text-gray-400 mt-0.5">Share anonymous diagnostics and feature usage statistics.</p>
+            </div>
+            <div class="toggle-track on" id="toggle-telemetry" data-toggle="telemetry">
+              <span class="toggle-thumb"></span>
+            </div>
+          </div>
+
+          <hr class="border-gray-100" />
+
+          <!-- Hardware Acceleration Toggle -->
+          <div class="flex items-center justify-between py-2">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-900">Hardware Acceleration</h3>
+              <p class="text-xs text-gray-400 mt-0.5">Use GPU rendering for higher canvas performance and smoother transitions.</p>
+            </div>
+            <div class="toggle-track on" id="toggle-gpu" data-toggle="gpu">
+              <span class="toggle-thumb"></span>
+            </div>
+          </div>
+
+          <hr class="border-gray-100" />
+
+          <!-- Developer Mode Toggle -->
+          <div class="flex items-center justify-between py-2">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-900">Developer Mode</h3>
+              <p class="text-xs text-gray-400 mt-0.5">Enable inspector tools, layout grids, and console logging.</p>
+            </div>
+            <div class="toggle-track" id="toggle-devmode" data-toggle="devmode">
+              <span class="toggle-thumb"></span>
+            </div>
+          </div>
+
+          <hr class="border-gray-100" />
+
+          <!-- Interface Theme Select -->
+          <div class="flex items-center justify-between py-2">
+            <div>
+              <h3 class="text-sm font-semibold text-gray-900">Interface Appearance</h3>
+              <p class="text-xs text-gray-400 mt-0.5">Choose your preferred workspace aesthetic.</p>
+            </div>
+            <select class="select-styled" id="select-theme">
+              <option value="system">Follow System</option>
+              <option value="light" selected>Light Mode</option>
+              <option value="dark">Dark Mode</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Account settings group -->
+        <section class="card-static p-6 space-y-4 animate-in animate-in-delay-2">
+          <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Account & Version</h2>
+          
+          <div class="flex justify-between items-center py-1">
+            <div>
+              <div class="text-sm font-semibold text-gray-900">Current Workspace Plan</div>
+              <div class="text-xs text-gray-400 mt-0.5">You are on the Pro Workspace Tier</div>
+            </div>
+            <span class="badge bg-blue-100 text-blue-700">Pro Plan</span>
+          </div>
+
+          <hr class="border-gray-100" />
+
+          <div class="flex justify-between items-center py-1">
+            <div>
+              <div class="text-sm font-semibold text-gray-900">App Version</div>
+              <div class="text-xs text-gray-400 mt-0.5">Build 2.0.48 (Release channel)</div>
+            </div>
+            <span class="text-xs text-gray-500 font-mono">v2.0.48-stable</span>
+          </div>
+        </section>
+
+        <!-- Keyboard Shortcuts group -->
+        <section class="card-static p-6 space-y-3 animate-in animate-in-delay-3">
+          <h2 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Keyboard Shortcuts</h2>
+          
+          <!-- Shortcut Row 1 -->
+          <div class="shortcut-row">
+            <span class="text-sm text-gray-700">Open Command Palette</span>
+            <kbd>⌘K</kbd>
+          </div>
+
+          <!-- Shortcut Row 2 -->
+          <div class="shortcut-row">
+            <span class="text-sm text-gray-700">New Project Canvas</span>
+            <kbd>⌘N</kbd>
+          </div>
+
+          <!-- Shortcut Row 3 -->
+          <div class="shortcut-row">
+            <span class="text-sm text-gray-700">Settings Preferences</span>
+            <kbd>⌘,</kbd>
+          </div>
+        </section>
+
+        <!-- Danger Zone -->
+        <section class="danger-zone p-6 space-y-4 animate-in animate-in-delay-4">
+          <h2 class="text-xs font-bold text-red-500 uppercase tracking-wider mb-2">Danger Zone</h2>
+          
+          <div class="flex items-center justify-between py-1">
+            <div>
+              <h3 class="text-sm font-semibold text-red-600">Delete Workspace</h3>
+              <p class="text-xs text-gray-400 mt-0.5">Permanently delete this workspace and all associated projects. This cannot be undone.</p>
+            </div>
+            <button class="btn btn-danger" onclick="showToast('Workspace deletion is disabled in demo mode.')">Delete Workspace</button>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation — Antigravity Docs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== Topbar ====== -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-logo">
+      <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+      </svg>
+      <span>Antigravity Docs</span>
+    </a>
+
+    <div class="topbar-search">
+      <svg class="w-4 h-4 search-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" placeholder="Search documentation… (⌘K)" />
+      <kbd>⌘K</kbd>
+    </div>
+
+    <select class="version-select">
+      <option value="v2.0" selected>v2.0 (Latest)</option>
+      <option value="v1.8">v1.8</option>
+      <option value="v1.0">v1.0</option>
+    </select>
+
+    <button class="mobile-menu-btn" aria-label="Open sidebar">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </header>
+
+  <!-- ====== Sidebar Overlay (Mobile) ====== -->
+  <div class="sidebar-overlay"></div>
+
+  <!-- ====== Sidebar ====== -->
+  <aside class="sidebar">
+    <nav>
+      <div class="sidebar-group-label">Getting Started</div>
+      <a href="index.html" class="sidebar-link">Introduction</a>
+      <a href="installation.html" class="sidebar-link active">Installation</a>
+      <a href="#" class="sidebar-link">Quick Start</a>
+
+      <div class="sidebar-group-label">Core Concepts</div>
+      <a href="#" class="sidebar-link">Design Tokens</a>
+      <a href="#" class="sidebar-link">Components</a>
+
+      <div class="sidebar-group-label">API Reference</div>
+      <a href="api-reference.html" class="sidebar-link">Endpoints</a>
+    </nav>
+  </aside>
+
+  <!-- ====== On-page TOC (Desktop only) ====== -->
+  <aside class="toc">
+    <div class="toc-title">On this page</div>
+    <a href="#prerequisites" class="toc-link">Prerequisites</a>
+    <a href="#install-packages" class="toc-link">Install Packages</a>
+    <a href="#tailwind-integration" class="toc-link">Tailwind Integration</a>
+  </aside>
+
+  <!-- ====== Main Content ====== -->
+  <main class="main-content">
+    <article>
+      <h1>Installation</h1>
+      <p class="lead">Get up and running with the Antigravity package CLI compiler in your project directory.</p>
+
+      <!-- Prerequisites -->
+      <section id="prerequisites">
+        <h2>Prerequisites</h2>
+        <p>Before installing, ensure that your local development environment meets the following requirements:</p>
+        
+        <ul>
+          <li><strong>Node.js</strong>: Version 18.0.0 or higher is required.</li>
+          <li><strong>Package Manager</strong>: Node Package Manager (npm), Yarn, or pnpm.</li>
+          <li><strong>Framework</strong>: Vite, Next.js, or any environment supporting CSS-in-JS or global stylesheets.</li>
+        </ul>
+
+        <div class="admonition note">
+          <svg class="admonition-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <div class="admonition-content">
+            <strong>Workspace Setup</strong>
+            If you are running in a monorepo workspace, make sure to execute commands inside the designated project subdirectory.
+          </div>
+        </div>
+      </section>
+
+      <!-- Install Packages -->
+      <section id="install-packages">
+        <h2>Install Packages</h2>
+        <p>Run the install command using your package manager of choice to add the core compiler package:</p>
+
+        <!-- Code block with tabs -->
+        <div class="code-block">
+          <div class="code-tabs">
+            <button class="code-tab active" data-tab="npm">npm</button>
+            <button class="code-tab" data-tab="yarn">Yarn</button>
+            <button class="code-tab" data-tab="pnpm">pnpm</button>
+          </div>
+
+          <div class="code-content">
+            <!-- npm Panel -->
+            <div class="code-panel active" data-panel="npm">
+              <pre><span class="comment"># Install Antigravity compiler as dev dependency</span>
+npm install -D @antigravity/compiler</pre>
+            </div>
+
+            <!-- yarn Panel -->
+            <div class="code-panel" data-panel="yarn">
+              <pre><span class="comment"># Add as dev dependency via yarn</span>
+yarn add -D @antigravity/compiler</pre>
+            </div>
+
+            <!-- pnpm Panel -->
+            <div class="code-panel" data-panel="pnpm">
+              <pre><span class="comment"># Install dev dependency using pnpm</span>
+pnpm add -D @antigravity/compiler</pre>
+            </div>
+
+            <!-- Copy button -->
+            <button class="copy-btn" aria-label="Copy code">
+              <!-- Copy icon -->
+              <svg class="w-4 h-4 copy-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              <!-- Check icon (hidden by default) -->
+              <svg class="w-4 h-4 check-icon text-emerald-500" style="display: none;" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path d="M20 6L9 17l-5-5"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tailwind Integration -->
+      <section id="tailwind-integration">
+        <h2>Tailwind Integration</h2>
+        <p>If you're using Tailwind CSS, make sure to configure your postcss plugins properly. The PostCSS plugin has moved to a separate package in recent versions.</p>
+
+        <div class="admonition warning">
+          <svg class="admonition-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <div class="admonition-content">
+            <strong>PostCSS Tailwind Warning</strong>
+            Do not use <code>tailwindcss</code> directly as a PostCSS plugin. To continue using Tailwind CSS with PostCSS, install <code>@tailwindcss/postcss</code> and update your PostCSS config file.
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <!-- ====== Prev / Next Navigation ====== -->
+    <nav class="prev-next">
+      <a href="index.html" class="prev">
+        <span class="label">Previous</span>
+        <span class="title">&larr; Introduction</span>
+      </a>
+      <a href="api-reference.html" class="next">
+        <span class="label">Next</span>
+        <span class="title">API Reference &rarr;</span>
+      </a>
+    </nav>
+
+    <!-- ====== Feedback Widget ====== -->
+    <div class="feedback-widget">
+      <p>Was this page helpful?</p>
+      <div class="feedback-btns">
+        <button class="feedback-btn" data-val="yes">
+          <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+          Yes
+        </button>
+        <button class="feedback-btn" data-val="no">
+          <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"/></svg>
+          No
+        </button>
+      </div>
+      <div class="feedback-thanks">Thank you for your feedback!</div>
+    </div>
+  </main>
+
+  <script src="js/docs.js"></script>
+</body>
+</html>
